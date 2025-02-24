@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="degrade"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/davi-franco-cosinha-731496340/" target="_blank">LINKEDIN</a></li>
+                <li><a href="https://github.com/dav-icode" target="_blank">GITHUB</a></li>
+                <li><a href="https://www.instagram.com/dev1zx" target="_blank">INSTAGRAM</a></li>
+            </ul>
+        </nav>
+        <div class="imagem">
+            <img src="image/timmy-turner.png" alt="perfil">
+        </div>
+    </header>
+
+    <main>
+        <div class="apresentation">
+            <h1>&lt;Hi! my name is Davi Franco Cosinha; I'm a web developer/&gt;</h1>
+            </h1>
+            <p>Trabalho focado em desenvolvimento de software. Meu objetivo é sempre melhorar minha eficiência e aprender novas habilidades para lidar com os desafios do dia a dia. Além disso, busco manter uma rotina equilibrada, focando na saúde e bem-estar. Sou prático e direcionado, sempre buscando soluções objetivas para qualquer situação.
+            </p>
+        </div>
+        <img id="pc" src="image/ilustracao.png" alt="">
+            
+    </main>
+    <div id="tech">
+        <a href="https://www.javascript.com" target="_blank" class="tooltip">
+            <img class="js" alt="Davi-Js" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+            <span class="tooltiptext">JavaScript</span>
+        </a>
+        <a href="https://reactjs.org" target="_blank" class="tooltip">
+            <img class="react" alt="Davi-React" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+            <span class="tooltiptext">React</span>
+        </a>
+        <a href="https://www.w3.org/html/" target="_blank" class="tooltip">
+            <img class="html" alt="Davi-HTML" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+            <span class="tooltiptext">HTML</span>
+        </a>
+        <a href="https://www.w3.org/Style/CSS/" target="_blank" class="tooltip">
+            <img class="css" alt="Davi-CSS" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+            <span class="tooltiptext">CSS</span>
+        </a>
+        <a href="https://www.python.org" target="_blank" class="tooltip">
+            <img class="py" alt="Davi-Python" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+            <span class="tooltiptext">Python</span>
+        </a>
+    </div>
+     
+    <footer> <a href="#">Criado por Davi</a>
+        </footer>
+    <script>
+        window.addEventListener('scroll', () => {
+          const scrollPosition = window.scrollY; // Posição do scroll
+          const maxScroll = document.documentElement.scrollHeight - window.innerHeight; // Distância máxima de rolagem
+          const scrollPercent = scrollPosition / maxScroll; // Percentual de rolagem
+      
+          // Define os valores das cores com base na rolagem
+          const blueAmount = Math.max(0, 255 - (scrollPercent * 150)); // Garante que o azul nunca passe de 0
+          const blackAmount = Math.min(255, scrollPercent * 255); // Garante que o preto nunca passe de 255
+      
+          // Calcula a cor dinâmica para o azul e o preto
+          const colorStart = `rgb(${blueAmount}, ${blueAmount}, 255)`;  // Cor azul ajustável
+          const colorEnd = `rgb(${blackAmount}, ${blackAmount}, ${blackAmount})`; // Cor preta ajustável
+      
+          // Atualiza a cor de fundo do degradê com uma transição suave
+          document.querySelector('.degrade').style.transition = 'background 0.3s ease-in-out';
+          document.querySelector('.degrade').style.background = `linear-gradient(to bottom, ${colorStart}, ${colorEnd})`;
+        });
+      </script>
+      
+      
+      
+</body>
+</html>
